@@ -1299,7 +1299,7 @@
 
   <header class="nav" id="nav">
     <div class="wrap nav-in">
-      <a class="logo" href="#top"><span class="dot"></span><span id="logoName">Uyên Nguyễn</span></a>
+      <a class="logo" href="#top"><span class="dot"></span><span id="logoName">Như Hương</span></a>
       <nav class="nav-links">
         <a href="#projects">Dự án</a>
         <a href="#about">Về tôi</a>
@@ -1323,7 +1323,7 @@
           <a href="#projects" class="btn btn-p">Xem dự án <span>↓</span></a>
           <a href="#contact" class="btn btn-g">Liên hệ hợp tác</a>
         </div>
-        <div class="stats rv" id="stats"></div>
+        <!-- <div class="stats rv" id="stats"></div> -->
       </div>
     </div>
 
@@ -1355,8 +1355,8 @@
           </div>
           <div class="rv" id="contact">
             <div class="contact-card">
-              <h3>Cùng làm việc nhé</h3>
-              <p>Có ý tưởng cần hiện thực hoá, hoặc cần người xử lý dữ liệu và dựng dashboard? Nhắn cho tôi.</p>
+              <h3>Hãy liên hệ cho tôi</h3>
+              <p></p>
               <div id="contacts"></div>
             </div>
           </div>
@@ -1371,7 +1371,7 @@
       <div class="fl">
         <a href="#projects">Dự án</a><a href="#about">Về tôi</a><a href="#contact">Liên hệ</a>
       </div>
-      <div>© <span id="yr"></span> <span id="footName">Uyên Nguyễn</span> · Xây bằng HTML thuần, chạy trên GitHub Pages
+      <div>© <span id="yr"></span> <span id="footName">Như Hương</span> · Xây bằng HTML thuần, chạy trên GitHub Pages
       </div>
     </div>
   </footer>
@@ -1405,7 +1405,7 @@
       ],
 
       stats: [
-        { n: 4, suffix: "", label: "Dự án" },
+        { n: 5, suffix: "", label: "Dự án" },
         { n: 3, suffix: "", label: "Nền tảng" },
         { n: 100, suffix: "%", label: "Tự tay xây" }
       ],
@@ -1506,24 +1506,29 @@
          DASHBOARD — Power BI
          --------------------------------------------------------------- */
       {
-        id: "dashboard-powerbi",
+        id: "weekly-workload",
         kind: "dashboard",
-        title: "Dashboard Power BI",
-        status: { type: "soon", text: "Sắp có bản demo" },
-        tagline: "Báo cáo phân tích vận hành xây trên Power BI — mô hình dữ liệu, chỉ số DAX và bộ trang báo cáo cho người quản lý.",
-        thumb: null,
-        ph: { icon: "📊", from: "#f59e0b", to: "#7c5cff", bars: true },
-        shot: null,
-        techs: ["Power BI", "DAX", "Power Query", "Data Modeling"],
-        role: "Cập nhật vai trò của bạn tại đây.",
-        problem: "Cập nhật bài toán: người quản lý cần nhìn thấy gì mà báo cáo cũ không cho thấy?",
+        title: "Weekly Workload Dashboard",
+        status: { type: "live", text: "Đang dùng nội bộ" },
+        tagline:
+          "Báo cáo Power BI theo dõi giờ làm và mức tải công việc hằng tuần của từng nhân viên — tự gom dữ liệu từ hàng chục file Excel rời trên SharePoint.",
+        thumb: "assets/img/powerbi-thumb.jpg",
+        shot: "assets/img/powerbi-full.jpg",
+        techs: ["Power BI", "Power Query (M)", "DAX", "SharePoint", "Excel", "HTML Visual"],
+        role: "Tự xây toàn bộ: khảo sát quy trình nhập liệu, thiết kế pipeline gom dữ liệu bằng Power Query, dựng mô hình và chỉ số DAX, thiết kế bố cục báo cáo.",
+        problem:
+          "Mỗi nhân viên nhập công việc và thời lượng vào một file Excel riêng đồng bộ trên SharePoint. Người quản lý phải dùng hàm hoặc mở từng file để ghép thủ công thành một file tổng — mất thời gian, dễ sai và luôn trễ so với thực tế.",
         features: [
-          "Cập nhật nhóm chỉ số / trang báo cáo thứ nhất.",
-          "Cập nhật nhóm chỉ số / trang báo cáo thứ hai.",
-          "Cập nhật nhóm chỉ số / trang báo cáo thứ ba."
+          "<strong>Gom dữ liệu tự động bằng Power Query</strong> — kết nối thẳng tới thư mục SharePoint, phân loại và nạp từng file nhân viên; file tổng tự cập nhật, không còn thao tác ghép tay.",
+          "<strong>Bộ lọc ba tầng</strong> — theo tuần, theo team và theo từng nhân viên; kèm thanh chuyển nhanh giữa các nhóm 3D/CT Scan, Calibration, Fixture/Gage, Measurement và SME.",
+          "<strong>Thẻ tóm tắt tuần</strong> — tổng giờ, utilization trung bình, so sánh với tuần trước, cảnh báo số nhân viên vượt capacity, người cao nhất và thấp nhất.",
+          "<strong>Bóc tách cơ cấu thời gian</strong> — tỷ trọng Core / Support / Admin theo team, tổng giờ theo nhóm công việc, phân bổ utilization theo category.",
+          "<strong>Ma trận utilization theo tuần</strong> — hai bảng nhiệt theo team và theo từng người, nhìn ra ngay tuần nào ai quá tải hoặc hụt tải.",
+          "<strong>Tùy biến giao diện bằng HTML visual</strong> — các thẻ tóm tắt và cảnh báo được dựng riêng để báo cáo dễ đọc hơn visual mặc định."
         ],
-        result: "",
-        note: "Dashboard gốc chạy trên <b>dữ liệu khách hàng thật</b> nên không công khai được. Tôi đang dựng lại một bản demo bằng <b>dữ liệu giả</b> giữ nguyên cấu trúc và logic tính toán để đăng tại đây.",
+        result:
+          "Người quản lý mở báo cáo là thấy ngay bức tranh tuần: ai quá tải, team nào hụt giờ, thời gian đang chảy vào nhóm công việc nào — thay vì phải ghép file Excel thủ công mỗi tuần.",
+        note: "Dữ liệu trong báo cáo chỉ là dữ liệu <b>giả lập</b> để mô phỏng sát nhu cầu thực tế.",
         links: []
       },
 
