@@ -1576,9 +1576,9 @@
     $("#aboutText").textContent = PROFILE.about;
     $("#yr").textContent = new Date().getFullYear();
 
-    $("#stats").innerHTML = PROFILE.stats.map(s =>
-      `<div class="stat"><div class="n" data-to="${s.n}" data-sfx="${esc(s.suffix)}">0</div><div class="l">${esc(s.label)}</div></div>`
-    ).join("");
+    /*     $("#stats").innerHTML = PROFILE.stats.map(s =>
+          `<div class="stat"><div class="n" data-to="${s.n}" data-sfx="${esc(s.suffix)}">0</div><div class="l">${esc(s.label)}</div></div>`
+        ).join(""); */
 
     $("#skills").innerHTML = PROFILE.skills.map(g =>
       `<div class="skill-group"><h4>${esc(g.group)}</h4><div class="skill-list">${g.items.map(i => `<span class="skill">${esc(i)}</span>`).join("")
