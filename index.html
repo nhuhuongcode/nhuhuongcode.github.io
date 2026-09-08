@@ -1528,7 +1528,7 @@
         ],
         result:
           "Người quản lý mở báo cáo là thấy ngay bức tranh tuần: ai quá tải, team nào hụt giờ, thời gian đang chảy vào nhóm công việc nào — thay vì phải ghép file Excel thủ công mỗi tuần.",
-        note: "Dữ liệu trong báo cáo chỉ là dữ liệu <b>giả lập</b> để mô phỏng sát nhu cầu thực tế.",
+        note: "Dữ liệu trong báo cáo chỉ là dữ liệu <b>giả lập</b> để mô phỏng sát bài toán thực tế.",
         links: []
       },
 
@@ -1536,24 +1536,29 @@
          DASHBOARD — Looker Studio
          --------------------------------------------------------------- */
       {
-        id: "dashboard-looker",
+        id: "crm-looker",
         kind: "dashboard",
-        title: "Dashboard Looker Studio",
-        status: { type: "soon", text: "Sắp có bản demo" },
-        tagline: "Báo cáo trực tuyến trên Looker Studio, kết nối trực tiếp nguồn dữ liệu và chia sẻ được cho cả nhóm.",
-        thumb: null,
-        ph: { icon: "📈", from: "#22d3ee", to: "#7c5cff", bars: true },
-        shot: null,
-        techs: ["Looker Studio", "Google Sheets", "BigQuery", "SQL"],
-        role: "Cập nhật vai trò của bạn tại đây.",
-        problem: "Cập nhật bài toán mà dashboard này giải quyết.",
+        title: "Dashboard CRM — Looker Studio",
+        status: { type: "live", text: "Đang dùng nội bộ" },
+        tagline:
+          "Bộ báo cáo Looker Studio tổng hợp dữ liệu từ hệ thống CRM: khách hàng, cơ hội, báo giá – đơn hàng và hoạt động hằng ngày, gom về một nơi duy nhất.",
+        thumb: "assets/img/looker-thumb.jpg",
+        shot: "assets/img/looker-full.jpg",
+        techs: ["Looker Studio", "Google Apps Script", "Google Sheets", "CRM API", "Data Modeling"],
+        role: "Tự xây toàn bộ: khảo sát nhu cầu quản lý, thiết kế luồng dữ liệu từ CRM về Google Sheets, viết Apps Script kết nối API, dựng 5 trang báo cáo trên Looker Studio.",
+        problem:
+          "Dữ liệu kinh doanh nằm rải trong hệ thống CRM, muốn xem một chỉ số phải lục qua nhiều màn hình. Người quản lý mất thời gian tìm thông tin và khó có được bức tranh tổng thể để ra quyết định.",
         features: [
-          "Cập nhật tính năng / trang báo cáo thứ nhất.",
-          "Cập nhật tính năng / trang báo cáo thứ hai.",
-          "Cập nhật tính năng / trang báo cáo thứ ba."
+          "<strong>Tổng quan</strong> — điểm hiệu suất tổng hợp, radar so sánh các chỉ số (doanh số, cơ hội, khách tạo mới, khách mua lần đầu, visit) và sơ đồ Sankey mô tả luồng khách hàng từ phân loại → xếp hạng → hoạt động → cơ hội → doanh số.",
+          "<strong>Khách hàng</strong> — phân loại SI/OEM · Trader · End User, bản đồ phân bố địa lý, tỷ trọng theo xếp hạng và theo phân loại, kèm bảng danh mục chi tiết.",
+          "<strong>Cơ hội</strong> — số cơ hội đang làm, thắng và thua, doanh số kỳ vọng, tỷ lệ thắng, bóc tách theo loại và theo nguồn gốc cơ hội.",
+          "<strong>Báo giá – Đơn hàng</strong> — số lượng và giá trị theo thời gian, xếp hạng theo nhân viên, tỷ trọng theo nhóm hàng hoá.",
+          "<strong>Hoạt động</strong> — nhiệm vụ, cuộc gọi và lịch hẹn theo từng người, cùng nhật ký công việc và trạng thái hoàn thành.",
+          "<strong>Kết nối API bằng Apps Script</strong> — thêm menu <em>Get Data</em> ngay trong Google Sheets để kéo dữ liệu khách hàng và đơn hàng từ CRM về, cập nhật mà không cần export thủ công."
         ],
-        result: "",
-        note: "Bản gốc dùng <b>dữ liệu thật của khách hàng</b> nên không chia sẻ công khai. Bản demo bằng <b>dữ liệu giả</b> sẽ được bổ sung.",
+        result:
+          "Toàn bộ hoạt động kinh doanh gói trong 5 trang báo cáo lọc được theo nhân viên và khoảng thời gian. Người quản lý nắm tình hình ngay khi mở báo cáo, thay vì tìm từng màn hình trong CRM.",
+        note: "Dữ liệu trong báo cáo chỉ là dữ liệu <b>giả lập</b> để mô phỏng sát bài toán thực tế.",
         links: []
       }
     ];
